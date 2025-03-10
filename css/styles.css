@@ -14,7 +14,7 @@ ul {
   list-style: none;
 }
 
-.menu .logo {
+.navigation .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -25,7 +25,7 @@ ul {
   letter-spacing: 0.03em;
 }
 
-.menu .logo-accent {
+.navigation .logo-accent {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -36,7 +36,7 @@ ul {
   letter-spacing: 0.03em;
 }
 
-.menu {
+.navigation {
   color: #2e2f42;
   font-size: 16px;
   font-weight: 500;
@@ -44,24 +44,20 @@ ul {
   letter-spacing: 0.02em;
 }
 
-.menu a:hover,
-.menu a:focus,
-.menu a:active,
+.navigation a:hover,
+.navigation a:focus,
+.navigation a:active,
 .contacts a:hover,
 .contacts a:focus,
 .contacts a:active {
   color: #404bbf;
 }
 
-.contacts {
+.contacts .contact-link {
   font-size: 16px;
-  color: #2e2f42;
+  color: #434455;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  font-style: normal;
-}
-
-.contacts address {
   font-style: normal;
 }
 

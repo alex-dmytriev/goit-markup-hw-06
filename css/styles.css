@@ -44,16 +44,16 @@ ul {
   letter-spacing: 0.02em;
 }
 
-.navigation a:hover,
-.navigation a:focus,
-.navigation a:active,
-.contacts a:hover,
-.contacts a:focus,
-.contacts a:active {
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active,
+.contact-link:hover,
+.contact-link:focus,
+.contact-link:active {
   color: #404bbf;
 }
 
-.contacts .contact-link {
+.contact-link {
   font-size: 16px;
   color: #434455;
   line-height: 1.5;
@@ -96,7 +96,7 @@ ul {
   background-color: #404bbf;
 }
 
-.features h3 {
+.subtitle {
   font-size: 20px;
   font-weight: 500;
   color: #2e2f42;
@@ -104,7 +104,7 @@ ul {
   letter-spacing: 0.02em;
 }
 
-.features p {
+.feature-description {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -114,7 +114,7 @@ ul {
   background-color: #f4f4fd;
 }
 
-.team h2 {
+.team-subtitle {
   color: #2e2f42;
   font-size: 36px;
   font-weight: 700;
@@ -124,44 +124,30 @@ ul {
   text-transform: capitalize;
 }
 
-.team h3 {
-  color: #2e2f42;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.02em;
-}
-
-.team p {
+.subtitle-text {
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: 0.02em;
 }
 
-.team li {
+.team-member {
   text-align: center;
   background-color: #fff;
 }
 
-.portfolio h2 {
+.portfolio-subtitle {
   color: #2e2f42;
   font-size: 36px;
   font-weight: 700;
-  line-height: 40px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
 }
 
-.portfolio h3 {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-}
-
-.portfolio li {
+.portfolio-item {
   text-align: center;
+  background-color: #fff;
 }
 
 .footer {
@@ -190,7 +176,7 @@ ul {
   letter-spacing: 0.03em;
 }
 
-.footer p {
+.footer-text {
   color: #f4f4fd;
   font-size: 16px;
   line-height: 1.5;

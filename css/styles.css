@@ -1,19 +1,91 @@
+/* ========================
+  --- Reset & Box Sizing ---
+  ========================= */
+
+/* Set box-sizing by default */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* ========================
+  --- General Styles ---
+  ========================= */
+
+/* Set default font and colors for body */
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #fff;
 }
 
+/* Reset headers and paragraphs margins to zero */
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Reset list margins and paddings to zero */
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Set custom link decaration */
 a {
   text-decoration: none;
   color: #2e2f42;
   font-style: normal;
 }
 
-ul {
-  list-style: none;
+/* Make images block elements */
+img {
+  display: block;
+  max-width: 100%;
 }
 
+
+/* ==========================
+  --- Layout & Containers --- 
+  =========================== */
+
+/* Set width, paddings and margins for containers */
+.container {
+  max-width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+/* =====================================
+  --- Temp Containers Visual Control --- 
+  ====================================== */
+/* 
+.container {
+  background-color: orange;
+} */
+
+
+
+/* ==========================
+  --- Top Line --- 
+  =========================== */
+
+
+
+header {
+  border-bottom: 1px;
+  border-color: #e7e9fc;
+}
+
+/* Logo basic parameters */
 .navigation .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -23,8 +95,11 @@ ul {
   text-decoration: none;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
+/* Logo span paramenters */
 .navigation .logo-accent {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -36,7 +111,10 @@ ul {
   letter-spacing: 0.03em;
 }
 
+/* Navigation menu parameters */
 .navigation {
+  display: flex;
+  justify-content: space-between;
   color: #2e2f42;
   font-size: 16px;
   font-weight: 500;
@@ -44,6 +122,20 @@ ul {
   letter-spacing: 0.02em;
 }
 
+.nav-menu {
+  display: flex;
+  gap: 40px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* Subcontainer to apply custom gap between logo & menu */
+.logo-menu {
+  display: flex;
+  gap: 76px;
+}
+
+/* Navigational & Contacts links hover parameters */
 .nav-link:hover,
 .nav-link:focus,
 .nav-link:active,
@@ -53,47 +145,48 @@ ul {
   color: #404bbf;
 }
 
+/* Custom contact links params*/
 .contact-link {
   font-size: 16px;
   color: #434455;
   line-height: 1.5;
   letter-spacing: 0.02em;
   font-style: normal;
+  font-weight: 400;
 }
 
 .contacts {
   font-style: normal;
 }
 
-.main-face {
-  background-color: #2e2f42;
+.contacts-list {
+  display: flex;
+  gap: 40px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
-.title {
-  font-size: 56px;
+
+/* ==========================
+  --- Sections --- 
+  =========================== */
+
+/* --- General Section Rules --- */
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.section-subtitle {
+  color: #2e2f42;
+  font-size: 36px;
   font-weight: 700;
-  color: #fff;
-  line-height: 1.07;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
-}
-
-.cta-button {
-  font-family: "Roboto" sans-serif;
-  background-color: #4d5ae5;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  text-align: center;
-  cursor: pointer;
-}
-
-.cta-button:hover,
-.cta-button:focus,
-.cta-button:active {
-  background-color: #404bbf;
+  text-transform: capitalize;
+  padding-bottom: 72px;
 }
 
 .subtitle {
@@ -109,34 +202,141 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+/* --------------------------- */
 
-.team {
-  background-color: #f4f4fd;
-}
 
-.hero-subtitle {
-  color: #2e2f42;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  text-transform: capitalize;
-}
-
-.team-member {
-  text-align: center;
-  background-color: #fff;
-}
-
-.portfolio-item {
-  text-align: center;
-  background-color: #fff;
-}
-
-.footer {
+/* --- Hero Section --- */
+  .hero {
   background-color: #2e2f42;
 }
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.title {
+  font-size: 56px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  text-align: center;
+  width: 496px;
+}
+
+.cta-button {
+  font-family: "Roboto" sans-serif;
+  background-color: #4d5ae5;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  cursor: pointer;
+  padding: 16px 32px 16px 32px;
+  border-radius: 4px;
+  border-width: 0;
+}
+
+.cta-button:hover,
+.cta-button:focus,
+.cta-button:active {
+  background-color: #404bbf;
+}
+
+
+/* --- Features Section --- */
+.hidden-header {
+  display: none;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 24px;
+  text-align: left;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: calc((100% - (3 * 24px)) / 4);
+}
+
+/* --- Team Section --- */
+.team {background-color: #f4f4fd;}
+
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  background-color: #fff;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding-bottom: 32px;
+  box-shadow:
+    0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+  width: calc((100% - (3 * 24px)) / 4);
+}
+
+.team-card img {
+  object-fit: cover;
+}
+
+/* --- Portfolio Section --- */
+.project-card {
+  text-align: left;
+  background-color: #fff;
+}
+
+.portfolio-row1 .project-card,
+.portfolio-row2 .project-card {
+  width: calc((100% - (2 * 24px)) / 3);
+}
+
+.project-card img {
+  object-fit: cover;
+}
+
+.portfolio-row1,
+.portfolio-row2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.portfolio-row1 {
+  margin-bottom: 48px;
+}
+
+.portfolio-list .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 32px 16px;
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: #e7e9fc;
+}
+
+/* ==========================
+  --- FOOTER --- 
+  =========================== */
+.footer {background-color: #2e2f42;}
 
 .footer .logo-footer {
   font-family: "Raleway", sans-serif;
@@ -165,4 +365,13 @@ ul {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  width: 264px;
+  margin-top: 16px
+
+}
+
+.footer .container {
+  text-align: left;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }

@@ -71,7 +71,7 @@ img {
 }
 
 /* ==========================
-  --- Top Line --- 
+  --- Top Line (Header) --- 
   =========================== */
 .top-line {
   border-bottom: 1px solid #e7e9fc;
@@ -130,12 +130,6 @@ img {
   padding: 24px 0;
 }
 
-/* Subcontainer to apply custom gap between logo & menu */
-/* .logo-menu {
-  display: flex;
-  gap: 76px;
-} */
-
 /* Navigational & Contacts links hover parameters */
 .nav-link:hover,
 .nav-link:focus,
@@ -147,14 +141,6 @@ img {
 }
 
 /* Custom contact links params*/
-.contact-link {
-  font-size: 16px;
-  color: #434455;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  font-style: normal;
-  font-weight: 400;
-}
 
 .contacts {
   font-style: normal;
@@ -163,6 +149,15 @@ img {
 .contacts-list {
   display: flex;
   gap: 40px;
+}
+
+.contact-item {
+  font-size: 16px;
+  color: #434455;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  font-style: normal;
+  font-weight: 400;
 }
 
 
@@ -257,6 +252,7 @@ img {
 
 
 /* --- Features Section --- */
+
 .visually-hidden {
   position: absolute;
   width: 1px;

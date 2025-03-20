@@ -121,7 +121,8 @@ img {
   letter-spacing: 0.02em;
 }
 
-.nav-menu {
+.nav-menu,
+.contacts-list {
   display: flex;
   gap: 40px;
 }
@@ -144,11 +145,6 @@ img {
 
 .contacts {
   font-style: normal;
-}
-
-.contacts-list {
-  display: flex;
-  gap: 40px;
 }
 
 .contact-item {
@@ -253,7 +249,7 @@ img {
 
 /* --- Features Section --- */
 
-.visually-hidden {
+/* .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -263,6 +259,10 @@ img {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+} */
+
+.visually-hidden {
+  display: none;
 }
 
 .features-list {

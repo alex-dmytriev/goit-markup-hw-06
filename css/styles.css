@@ -345,7 +345,7 @@ img {
 
 
 /* --- Portfolio Section --- */
-. .project-card {
+.portfolio-list .project-card {
   text-align: left;
   background-color: #fff;
 }

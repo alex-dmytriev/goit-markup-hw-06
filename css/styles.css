@@ -157,31 +157,36 @@ img {
   color: #404bbf;
 }
 
-.nav-item {
+/* .nav-item {
   display: flex;
   flex-direction: column;
+} */
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Stylish underscore for menu links */
-.nav-item::after {
+.nav-link::after {
   content: "";
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: rgba(64, 75, 191, 0);
-  position: relative;
-  top: 1px;
+  background-color: rgba(64, 75, 191, 1);
+  position: absolute;
+  bottom: 0;
   transform: translateY(100%);
-  transition: transform 150ms ease-in-out, background-color 150ms ease-in-out;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-.nav-item:hover::after {
-  background-color: rgba(64, 75, 191, 1);
+.nav-link:hover::after {
   transform: translateY(0);
 }
-
-
 
 /* Custom contact links params*/
 
@@ -399,6 +404,7 @@ img {
 .team-social-icons {
   display: flex;
   justify-content: space-between;
+  fill: none;
 }
 
 
@@ -550,4 +556,5 @@ img {
   display: flex;
   justify-content: space-between;
   gap: 16px;
+  fill: none;
 }

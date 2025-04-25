@@ -191,6 +191,7 @@ Ad .nav-link:active,
 }
 
 .nav-menu .nav-item:first-child .nav-link {
+  color: #404bbf;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -355,8 +356,11 @@ Ad .nav-link:active,
   border-color: #8e8f99;
   border-width: 1px;
   margin-bottom: 8px;
-
 }
+
+/* .feature-icon {
+  fill: #2e2f42;
+} */
 
 
 .feature .subtitle {
@@ -466,12 +470,16 @@ Ad .nav-link:active,
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-card:hover .overlay-text {
+.project-card:hover {
   box-shadow:
     0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
   cursor: pointer;
+
+}
+
+.project-card:hover .overlay-text {
   transform: translateY(0%);
 }
 
@@ -581,9 +589,6 @@ Ad .nav-link:active,
   gap: 16px;
   width: 208px;
   text-align: left;
-
-  margin-bottom: 16px;
-
 }
 
 .footer-social-text {
@@ -592,6 +597,7 @@ Ad .nav-link:active,
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-bottom: 16px;
 }
 
 .footer-social-icons {

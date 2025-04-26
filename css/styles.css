@@ -428,7 +428,7 @@ Ad .nav-link:active,
   height: 40px;
 }
 
-.team-social-icon a {
+.team-social-icon .social-link {
   width: 100%;
   height: 100%;
   background-color: #4d5ae5;

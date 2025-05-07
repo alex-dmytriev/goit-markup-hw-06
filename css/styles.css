@@ -917,6 +917,7 @@ Ad .nav-link:active,
 /* --- Checkbox styling ---*/
 .checkbox-container {
   margin-bottom: 24px;
+  width: 100%;
 }
 
 .checkbox-label {
@@ -939,6 +940,8 @@ Ad .nav-link:active,
   align-items: center;
   justify-content: center;
   fill: transparent;
+
+  margin-right: 8px;
 }
 
 input[type="checkbox"]:checked+.checkbox-label .checkbox-frame {

@@ -22,6 +22,7 @@
 </head>
 
 <body>
+  <!-- Top-line header menu -->
   <header class="top-line">
     <div class="container">
       <nav class="navigation">
@@ -52,16 +53,15 @@
   </header>
 
   <main>
-    <!-- /// First Hero Section ///////// -->
+    <!-- Hero Section [1] -->
     <section class="hero-section">
       <div class="container">
         <h1 class="title">Effective Solutions for Your Business</h1>
         <button class="cta-button" type="button">Order Service</button>
       </div>
     </section>
-    <!-- /// End of First Hero Section //////// -->
 
-    <!-- /// Feature Section //////// -->
+    <!-- Feature Section [2] -->
     <section class="section">
       <div class="container">
         <h2 class="visually-hidden">Features</h2>
@@ -109,9 +109,8 @@
         </ul>
       </div>
     </section>
-    <!-- /// End of Feature Section /////////////// -->
 
-    <!--/// Team Section //////////////////////////////// -->
+    <!-- Team Section [3] -->
     <section class="team-section">
       <div class="container">
         <h2 class="section-subtitle">Our Team</h2>
@@ -267,9 +266,8 @@
         </ul>
       </div>
     </section>
-    <!-- /// End of Team Section //////////// -->
 
-    <!-- /// Portfolio Section ////////// -->
+    <!-- Portfolio Section [4] -->
     <section class="section">
       <div class="container">
         <h2 class="section-subtitle">Our Porfolio</h2>
@@ -357,12 +355,10 @@
         </ul>
       </div>
     </section>
-    <!-- /// End of Portfolio Section ////////// -->
   </main>
-
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <!--Footer Logo-->
       <div class="footer-logo-text">
         <a class="logo-footer" href="./index.html">Web<span class="footer-logo-accent">Studio</span></a>
         <p class="footer-text">Increase the flow of customers and sales for your business with digital marketing &
@@ -404,89 +400,89 @@
           </li>
         </ul>
       </div>
-
       <div class="footer-subscription">
+        <p class="footer-form-text">
+          Subscribe
+        </p>
         <form class="footer-form">
-          <label class="footer-form-label" for="email-in">
-            Subscribe
+          <label class="footer-form-label">
+            <input class="footer-email-input" type="email" name="footer-email" placeholder="E-mail">
           </label>
-          <div class="input-btn-line">
-            <input class="footer-email-input" type="email" name="footer-email" placeholder="E-mail" id="email-in" />
-            <button class="footer-subscribe-btn" type="submit">
-              Subscribe
-              <span class="send-icon-container">
-                <svg class="footer-icon-send" width="24" height="20">
-                  <use href="./images/icons.svg#icon-send"></use>
-                </svg>
-              </span>
-            </button>
-          </div>
+          <button class="footer-subscribe-btn" type="submit">
+            Subscribe
+            <svg class="footer-icon-send" width="24" height="24">
+              <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+          </button>
         </form>
       </div>
     </div>
   </footer>
-
   <!-- Modal Window -->
   <div class="modal-overlay">
-    <form class="modal">
-      <div class="close-btn">
+    <div class="modal-window">
+      <button class="close-btn" type="button">
         <svg class="cross-icon" width="8" height="8">
           <use href="./images/icons.svg#icon-cross"></use>
         </svg>
-      </div>
+      </button>
       <p class="modal-header">Leave your contacts and we will call you back</p>
-      <div class="inputs">
-        <label class="modal-form-label">
-          Name
+      <form class="modal-form">
+        <div class="inputs">
+          <label class="modal-form-label" for="user-name">
+            Name
+          </label>
           <div class="input-container">
-            <span class="input-icon">
-              <svg class="input-icon-name" width="12" height="12">
-                <use href="./images/icons.svg#icon-name"></use>
-              </svg>
-            </span>
-            <input class="input-field" type="text" name="user-name" />
-          </div>
-        </label>
-        <label class="modal-form-label">
-          Phone
-          <div class="input-container">
-            <span class="input-icon">
-              <svg class="input-icon-phone" width="13" height="13">
-                <use href="./images/icons.svg#icon-phone"></use>
-              </svg>
-            </span>
-            <input class="input-field" type="tel" name="user-phone" />
-          </div>
-        </label>
-        <label class="modal-form-label">
-          Email
-          <div class="input-container">
-            <span class="input-icon">
-              <svg class="input-icon-email" width="15" height="12">
-                <use href="./images/icons.svg#icon-email"></use>
-              </svg>
-            </span>
-            <input class="input-field" type="email" name="user-email" />
-          </div>
-
-        </label>
-        <label class="modal-form-label">
-          Comment
-          <textarea class="comment-field" name="user-comment" rows="7" placeholder="Text input"></textarea>
-        </label>
-        <label class="custom-checkbox">
-          <input class="terms-chkbox" type="checkbox" name="agreement-value" value="true" />
-          <span class="checkbox-icon">
-            <svg class="checkmark" width="10" height="8">
-              <use href="./images/icons.svg#icon-cross"></use>
+            <input class="input-field" type="text" name="user-name" id="user-name">
+            <svg class="input-icon" width="18" height="24">
+              <use href="./images/icons.svg#icon-name"></use>
             </svg>
-          </span>
-          I accept the terms and conditions of the&nbsp;
-          <a class="terms-link" href="/policy">Privacy Policy</a>
-        </label>
-      </div>
-      <button class="form-btn" type="submit">Send</button>
-    </form>
+          </div>
+        </div>
+        <div class="inputs">
+          <label class="modal-form-label" for="user-name">
+            Phone
+          </label>
+          <div class="input-container">
+            <input class="input-field" type="phone" name="user-name" id="user-name">
+            <svg class="input-icon" width="18" height="24">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="inputs">
+          <label class="modal-form-label" for="user-name">
+            Email
+          </label>
+          <div class="input-container">
+            <input class="input-field" type="email" name="user-name" id="user-name">
+            <svg class="input-icon" width="18" height="24">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="comment-container">
+          <label class="modal-form-label" for="user-comment">
+            Comment
+          </label>
+          <textarea class="comment-field" name="user-comment" rows="7" placeholder="Text input"
+            id="user-comment"></textarea>
+        </div>
+        <div class="checkbox-container">
+          <input class="visually-hidden" type="checkbox" name="user-privacy" value="true" id="user-privacy">
+          <label class="checkbox-label" for="user-privacy">
+            <span class="checkbox-frame">
+              <svg class="checkmark" width="10" height="8">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
+            </span>
+            I accept the terms and conditions of the
+            <a class="terms-link" href="/policy">Privacy Policy</a>
+          </label>
+        </div>
+        <button class="form-btn" type="submit">Send</button>
+      </form>
+    </div>
   </div>
 </body>
 

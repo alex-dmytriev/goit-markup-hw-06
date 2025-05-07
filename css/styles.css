@@ -876,8 +876,8 @@ Ad .nav-link:active,
   transition: fill 250ms var(--standard-timing-function);
 }
 
-.input-icon:focus {
-  fill: var(--iris)
+.input-container:focus-within .input-icon {
+  fill: var(--iris);
 }
 
 .comment-container {

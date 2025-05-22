@@ -24,18 +24,19 @@
 <body>
   <!-- Top-line header menu -->
   <header class="top-line">
-    <div class="container">
+    <div class="container top-line-container">
       <nav class="navigation">
-        <a class="logo" href="./index.html">Web<span class="logo-accent">Studio</span></a>
+        <a class="logo logo-header" href="./index.html">Web<span
+            class="logo-accent logo-accent-header">Studio</span></a>
         <ul class="nav-menu">
           <li class="nav-item">
             <a class="nav-link" href="./index.html">Studio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Portfolio</a>
+            <a class="nav-link" href="#">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Contacts</a>
+            <a class="nav-link" href="#">Contacts</a>
           </li>
         </ul>
       </nav>
@@ -49,22 +50,91 @@
           </li>
         </ul>
       </address>
+      <button class="mobile-menu-btn">
+        <svg class="mobile-menu-icon" width="16.8" height="14.4">
+          <use href="./images/icons.svg#icon-menu"></use>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay">
+      <div class="mobile-menu-container">
+        <button class="close-btn mobile-close-btn" type="button">
+          <svg class="cross-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <nav class="mobile-navigation">
+          <ul class="mobile-nav-menu">
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="./index.html">Studio</a>
+            </li>
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="#">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <address class="mobile-contacts">
+          <ul class="mobile-contact-list">
+            <li class="mobile-contact-item">
+              <a class="mobile-contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+            <li class="mobile-contact-item">
+              <a class="mobile-contact-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+            </li>
+          </ul>
+        </address>
+        <ul class="mobile-menu-social-icons">
+          <li class="mobile-menu-social-item">
+            <a class="mobile-menu-social-link" href="https://instagram.com" target="_blank">
+              <svg class="mobile-menu-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-item">
+            <a class="mobile-menu-social-link" href="https://twitter.com" target="_blank">
+              <svg class="mobile-menu-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-item">
+            <a class="mobile-menu-social-link" href="https://facebook.com" target="_blank">
+              <svg class="mobile-menu-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-item">
+            <a class="mobile-menu-social-link" href="https://linkedin.com" target="_blank">
+              <svg class="mobile-menu-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
 
   <main>
     <!-- Hero Section [1] -->
     <section class="hero-section">
-      <div class="container">
+      <div class="container hero-container">
         <h1 class="title">Effective Solutions for Your Business</h1>
         <button class="cta-button" type="button">Order Service</button>
       </div>
     </section>
 
     <!-- Feature Section [2] -->
-    <section class="section">
+    <section class="features-section">
       <div class="container">
-        <h2 class="visually-hidden">Features</h2>
+        <h2 class="section-subtitle visually-hidden">Features</h2>
         <ul class="features-list">
           <li class="feature">
             <div class="icon-container">
@@ -268,86 +338,86 @@
     </section>
 
     <!-- Portfolio Section [4] -->
-    <section class="section">
+    <section class="portfolio-section">
       <div class="container">
-        <h2 class="section-subtitle">Our Porfolio</h2>
+        <h2 class="section-subtitle">Our Portfolio</h2>
         <ul class="portfolio-list">
-          <li class="project-card">
-            <div class="image-box">
-              <img src="./images/banking-app_opt.jpg" width="360" height="300" alt="Banking app example">
+          <li class="portfolio-card">
+            <div class="portfolio-image-box">
+              <img src="./images/banking-app_opt.jpg" alt="Banking app example" width="360" height="300">
               <p class="overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                 Tracker App · Exotic
                 Fruit Ecommerce App ·
                 Cloud Storage App</p>
             </div>
-            <div class="project-content">
+            <div class="portfolio-content">
               <h3 class="subtitle">Banking App</h3>
               <p class="subtitle-text">App</p>
             </div>
           </li>
-          <li class="project-card">
-            <div class="image-box">
-              <img src="./images/cashless-payment_opt.jpg" width="360" height="300"
-                alt="Cashless payment by smartphone">
+          <li class="portfolio-card">
+            <div class="portfolio-image-box">
+              <img src="./images/cashless-payment_opt.jpg" alt="Cashless payment by smartphone" width="360"
+                height="300">
               <p class="overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                 Tracker App · Exotic
                 Fruit Ecommerce App ·
                 Cloud Storage App</p>
             </div>
-            <div class="project-content">
+            <div class="portfolio-content">
               <h3 class="subtitle">Cashless Payment</h3>
               <p class="subtitle-text">Marketing</p>
             </div>
           </li>
-          <li class="project-card">
-            <div class="image-box">
-              <img src="./images/meditation-app_opt.jpg" width="360" height="300" alt="Meditation App on laptop">
+          <li class="portfolio-card">
+            <div class="portfolio-image-box">
+              <img src="./images/meditation-app_opt.jpg" alt="Meditation App on laptop" width="360" height="300">
               <p class="overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                 Tracker App · Exotic
                 Fruit Ecommerce App ·
                 Cloud Storage App</p>
             </div>
-            <div class="project-content">
+            <div class="portfolio-content">
               <h3 class="subtitle">Meditation App</h3>
               <p class="subtitle-text">App</p>
             </div>
           </li>
-          <li class="project-card">
-            <div class="image-box">
-              <img src="./images/taxi-service_opt.jpg" width="360" height="300" alt="Taxi driver hands on the wheel">
+          <li class="portfolio-card">
+            <div class="portfolio-image-box">
+              <img src="./images/taxi-service_opt.jpg" alt="Taxi driver hands on the wheel" width="360" height="300">
               <p class="overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                 Tracker App · Exotic
                 Fruit Ecommerce App ·
                 Cloud Storage App</p>
             </div>
-            <div class="project-content">
+            <div class="portfolio-content">
               <h3 class="subtitle">Taxi Service</h3>
               <p class="subtitle-text">Marketing</p>
             </div>
           </li>
-          <li class="project-card">
-            <div class="image-box">
-              <img src="./images/screen-illustrations_opt.jpg" width="360" height="300"
-                alt="Mobile screen background pictures">
+          <li class="portfolio-card">
+            <div class="portfolio-image-box">
+              <img src="./images/screen-illustrations_opt.jpg" alt="Mobile screen background pictures" width="360"
+                height="300">
               <p class="overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                 Tracker App · Exotic
                 Fruit Ecommerce App ·
                 Cloud Storage App</p>
             </div>
-            <div class="project-content">
+            <div class="portfolio-content">
               <h3 class="subtitle">Screen Illustrations</h3>
               <p class="subtitle-text">Design</p>
             </div>
           </li>
-          <li class="project-card">
-            <div class="image-box">
-              <img src="./images/online-cources_opt.jpg" width="360" height="300" alt="Girl wearing glasses">
+          <li class="portfolio-card">
+            <div class="portfolio-image-box">
+              <img src="./images/online-cources_opt.jpg" alt="Girl wearing glasses" width="360" height="300">
               <p class="overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                 Tracker App · Exotic
                 Fruit Ecommerce App ·
                 Cloud Storage App</p>
             </div>
-            <div class="project-content">
+            <div class="portfolio-content">
               <h3 class="subtitle">Online Courses</h3>
               <p class="subtitle-text">Marketing</p>
             </div>
@@ -360,7 +430,8 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-logo-text">
-        <a class="logo-footer" href="./index.html">Web<span class="footer-logo-accent">Studio</span></a>
+        <a class="logo logo-footer" href="./index.html">Web<span
+            class="logo accent footer-logo-accent">Studio</span></a>
         <p class="footer-text">Increase the flow of customers and sales for your business with digital marketing &
           growth
           solutions.</p>
@@ -435,7 +506,7 @@
           <div class="input-container">
             <input class="input-field" type="text" name="user-name" id="user-name" required>
             <svg class="input-icon" width="18" height="24">
-              <use href="./images/icons.svg#icon-name"></use>
+              <use href="./images/icons.svg#icon-person"></use>
             </svg>
           </div>
         </div>
@@ -469,18 +540,21 @@
             id="user-comment"></textarea>
         </div>
         <div class="checkbox-container">
-          <input class="visually-hidden" type="checkbox" name="user-privacy" value="true" id="user-privacy">
           <label class="checkbox-label" for="user-privacy">
             <span class="checkbox-frame">
               <svg class="checkmark" width="10" height="8">
                 <use href="./images/icons.svg#icon-check"></use>
               </svg>
-            </span>I accept the terms and conditions of the
-            <a class="terms-link" href="/policy">Privacy Policy</a>
+            </span>
+            <input class="default chkbox visually-hidden" type="checkbox" name="user-privacy" value="true"
+              id="user-privacy">
+            <span class="checkbox-text">
+              I accept the terms and conditions of the <a class="terms-link" href="#">Privacy Policy</a>
+            </span>
           </label>
         </div>
-        <button class="form-btn" type="submit">Send</button>
       </form>
+      <button class="form-btn" type="submit">Send</button>
     </div>
   </div>
 </body>

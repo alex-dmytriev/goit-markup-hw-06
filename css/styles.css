@@ -194,7 +194,7 @@ img {
   height: 24px;
 }
 
-.mobile-menu-btn .mobile-menu-icon {
+.mobile-menu-icon {
   fill: var(--common-black);
 }
 
@@ -241,7 +241,9 @@ img {
   overflow: hidden;
 }
 
-/* Decoration underscore for menu links */
+/* --- Decoration underscore for menu links --- */
+
+/* Decoration element underscore styling */
 .nav-menu .nav-item:first-child .nav-link::after {
   content: "";
   width: 100%;
@@ -250,19 +252,23 @@ img {
   background-color: var(--ocean);
   position: absolute;
   bottom: -1px;
+  /* Put the decoration element below */
   transform: translateY(100%);
   transition: transform var(--basic-transition);
 }
 
+/* Active state for the first menu item decoration element */
 .nav-menu .nav-item:first-child .nav-link:active::after {
   transform: translateY(0);
 }
 
+/* Color first menu item in default state */
 .nav-menu .nav-item:first-child .nav-link {
   color: var(--ocean);
   transition: color var(--basic-transition);
 }
 
+/* Hover state for the first menu item, all the other items hover is set above */
 .nav-menu .nav-item:first-child .nav-link:hover {
   color: var(--ocean)
 }
@@ -477,11 +483,12 @@ img {
   margin-bottom: 8px;
 }
 
-.feature .subtitle {
+.feature-subtitle {
   font: var(--header2);
+  margin-bottom: 8px;
 }
 
-.feature .subtitle-text {
+.feature-subtitle-text {
   font: var(--body-medium);
 }
 
@@ -491,7 +498,7 @@ img {
   padding: 96px 0;
 }
 
-.team-section .container {
+.team-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -526,7 +533,7 @@ img {
   object-fit: cover;
 }
 
-.card-content {
+.team-card-content {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -534,15 +541,7 @@ img {
   width: 232px;
 }
 
-/* .card-content .subtitle {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  text-align: center;
-} */
-
-.card-content .subtitle-text {
+.team-card-text {
   text-align: center;
   font-weight: 400;
 }
@@ -558,7 +557,7 @@ img {
   height: 40px;
 }
 
-.team-social-icon .social-link {
+.team-social-link {
   width: 100%;
   height: 100%;
   background-color: var(--iris);
@@ -569,8 +568,8 @@ img {
   transition: background-color var(--basic-transition);
 }
 
-.team-social-icon a:hover,
-.team-social-icon a:focus {
+.team-social-link:hover,
+.team-social-link:focus {
   background-color: var(--ocean);
 }
 
@@ -586,8 +585,6 @@ img {
   background-color: var(--common-white);
   box-shadow: none;
   transition: box-shadow var(--basic-transition);
-
-  /* width: calc((100% - 48px) / 3); */
 }
 
 .portfolio-card:hover {
@@ -602,7 +599,7 @@ img {
   transform: translateY(0%);
 }
 
-.portfolio-card .portfolio-image-box {
+.portfolio-image-box {
   object-fit: cover;
   position: relative;
   overflow: hidden;
@@ -610,7 +607,7 @@ img {
   height: 280px;
 }
 
-.portfolio-image-box img {
+.portfolio-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -647,16 +644,11 @@ img {
   text-align: left;
 }
 
-.portfolio-content .subtitle {
+.portfolio-subtitle {
   margin-bottom: 8px;
   font: var(--header3);
   letter-spacing: 0.02em;
   text-align: left;
-}
-
-.portfolio-content .subtitle-text {
-  text-align: left;
-  font: var(--body);
 }
 
 /* === FOOTER === */
@@ -681,7 +673,7 @@ img {
   text-align: left;
 }
 
-.footer .container {
+.footer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -837,8 +829,7 @@ img {
     visibility var(--basic-transition);
   opacity: 0;
   pointer-events: none;
-
-  padding: 8px 16px 0 16px;
+  padding: 8px 16px 8px 16px;
 
 }
 
@@ -853,7 +844,6 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 288px;
-  height: 623px;
   background-color: var(--dairy);
   box-shadow:
     0px 1px 1px 0px rgba(0, 0, 0, 0.14),
@@ -865,11 +855,13 @@ img {
 }
 
 .modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   background-color: rgba(252, 252, 252, 1);
 }
 
 .inputs {
-  margin-bottom: 8px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -893,7 +885,7 @@ img {
     border var(--basic-transition);
 }
 
-.close-btn .cross-icon {
+.modal-cross-icon {
   transition: fill var(--basic-transition);
 }
 
@@ -926,7 +918,7 @@ img {
 
 .input-field {
   width: 100%;
-  height: 40px;
+  min-height: 35px;
   border: 1px solid var(--navi-blue-modal);
   border-radius: 4px;
   background-color: transparent;
@@ -958,13 +950,13 @@ img {
 }
 
 .comment-container {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   width: 100%;
 }
 
 .comment-field {
   width: 100%;
-  height: 120px;
+  min-height: 115px;
   font: var(--small-text);
   letter-spacing: 0.04em;
   color: var(--navi-blue-modal);
@@ -1107,7 +1099,7 @@ img {
     padding: 112px 0;
   }
 
-  .hero-section .container {
+  .hero-container {
     gap: 36px;
   }
 
@@ -1128,12 +1120,12 @@ img {
     flex-basis: calc((100% - 24px) / 2);
   }
 
-  .feature .subtitle {
+  .feature-subtitle {
     text-align: left;
   }
 
   /* Team section tablet override rules  */
-  .team-section .container {
+  .team-container {
     width: 100%;
     max-width: 768px;
   }
@@ -1175,7 +1167,7 @@ img {
     padding: 96px 0;
   }
 
-  .footer .container {
+  .footer-container {
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 72px;
@@ -1268,7 +1260,7 @@ img {
   }
 
   /* Feature section desktop override rules */
-  .features-section .subtitle {
+  .feature-subtitle {
     font: var(--header3);
     letter-spacing: 0.02em;
     color: var(--navy-blue);
@@ -1288,7 +1280,7 @@ img {
     display: flex;
   }
 
-  .feature .subtitle-text {
+  .feature-subtitle-text {
     font: var(--body);
   }
 
@@ -1310,7 +1302,6 @@ img {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
-
   }
 
   .portfolio-card {
@@ -1323,7 +1314,7 @@ img {
     padding-bottom: 100px;
   }
 
-  .footer .container {
+  .footer-container {
     flex-direction: row;
     align-items: start;
     gap: 0;

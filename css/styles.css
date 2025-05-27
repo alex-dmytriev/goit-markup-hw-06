@@ -40,6 +40,9 @@
 
   /* Transition Variables */
   --basic-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Flexible Letter Spacing */
+  --letter-spacing-body: 0.04em;
 }
 
 
@@ -187,7 +190,6 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4.8px 3.6px;
   border: none;
   background: transparent;
   width: 24px;
@@ -241,9 +243,29 @@ img {
   overflow: hidden;
 }
 
-/* --- Decoration underscore for menu links --- */
+/* --- Decorated underscore for menu links --- */
 
-/* Decoration element underscore styling */
+/* Decorated element styling */
+.nav-link::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--ocean);
+  position: absolute;
+  bottom: 0;
+  /* Put the decorated element below */
+  transform: translateY(100%);
+  transition: transform var(--basic-transition);
+}
+
+/* Focus state for all menu items */
+.nav-link:focus::after,
+.nav-link:active::after {
+  transform: translateY(0);
+}
+
+/* 1st item default decorated underscore emulation */
 .nav-menu .nav-item:first-child .nav-link::after {
   content: "";
   width: 100%;
@@ -251,25 +273,26 @@ img {
   border-radius: 2px;
   background-color: var(--ocean);
   position: absolute;
-  bottom: -1px;
-  /* Put the decoration element below */
-  transform: translateY(100%);
+  bottom: 0;
+  transform: translateY(0);
   transition: transform var(--basic-transition);
 }
 
-/* Active state for the first menu item decoration element */
-.nav-menu .nav-item:first-child .nav-link:active::after {
+/* 1st item active state - emulation */
+.nav-item:first-child .nav-link:focus::after,
+.nav-item:first-child .nav-link:active::after {
   transform: translateY(0);
 }
 
-/* Color first menu item in default state */
-.nav-menu .nav-item:first-child .nav-link {
+/* 1st item default color - active state emulation */
+.nav-item:first-child .nav-link,
+.mobile-nav-item:first-child .mobile-nav-link {
   color: var(--ocean);
   transition: color var(--basic-transition);
 }
 
-/* Hover state for the first menu item, all the other items hover is set above */
-.nav-menu .nav-item:first-child .nav-link:hover {
+/* 1st item hover state emulation */
+.nav-item:first-child .nav-link:hover {
   color: var(--ocean)
 }
 
@@ -278,6 +301,7 @@ img {
   font-style: normal;
 }
 
+/* Mobile Menu Overlay */
 .mobile-menu-overlay {
   background-color: var(--common-white);
   position: fixed;
@@ -330,6 +354,16 @@ img {
   color: var(--slate);
   margin-bottom: 48px;
 }
+
+/* Reordering mobile menu contact info */
+.mobile-menu-phone {
+  order: 1;
+}
+
+.mobile-menu-email {
+  order: 2;
+}
+
 
 .mobile-menu-social-icons {
   display: flex;
@@ -595,15 +629,10 @@ img {
   cursor: pointer;
 }
 
-.portfolio-card:hover .overlay-text {
-  transform: translateY(0%);
-}
-
 .portfolio-image-box {
   object-fit: cover;
   position: relative;
   overflow: hidden;
-  /* width: 288px; */
   height: 280px;
 }
 
@@ -625,6 +654,10 @@ img {
   padding: 40px 32px;
   transform: translateY(100%);
   transition: transform var(--basic-transition);
+}
+
+.portfolio-card:hover .overlay-text {
+  transform: translateY(0%);
 }
 
 .portfolio-list {
@@ -773,7 +806,7 @@ img {
 
 .footer-email-input:focus-within {
   border-color: var(--iris);
-  outline: none;
+  outline: transparent;
 }
 
 .footer-email-input::placeholder {
@@ -913,18 +946,19 @@ img {
   letter-spacing: 0.04em;
   color: var(--light-slate);
   display: block;
-  margin-bottom: 4px;
+  /* margin-bottom: 4px; */
 }
 
 .input-field {
   width: 100%;
-  min-height: 35px;
+  height: 40px;
   border: 1px solid var(--navi-blue-modal);
   border-radius: 4px;
   background-color: transparent;
-  padding-left: 38px;
+  padding-left: 34px;
   outline: transparent;
   transition: border-color var(--basic-transition);
+  font-size: 18px;
 }
 
 .input-field:focus {
@@ -939,7 +973,7 @@ img {
 
 .input-icon {
   position: absolute;
-  left: 16px;
+  left: 19px;
   top: 50%;
   transform: translateY(-50%);
   transition: fill var(--basic-transition);
@@ -955,8 +989,9 @@ img {
 }
 
 .comment-field {
+  display: block;
   width: 100%;
-  min-height: 115px;
+  height: 120px;
   font: var(--small-text);
   letter-spacing: 0.04em;
   color: var(--navi-blue-modal);
@@ -964,6 +999,7 @@ img {
   border-radius: 4px;
   background-color: transparent;
   padding: 8px 16px;
+  margin-top: 4px;
   outline: transparent;
   resize: none;
   transition: border-color var(--basic-transition);
@@ -988,6 +1024,7 @@ img {
 
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 
 .checkbox-frame {
@@ -1003,31 +1040,34 @@ img {
   align-items: center;
   justify-content: center;
   fill: transparent;
-  margin-right: 8px;
+  /* margin-right: 8px; */
+  flex-shrink: 0;
 }
 
-.checkbox-label input[type="checkbox"]:checked+.checkbox-frame {
+.modal-default-chkbox:checked+.checkbox-frame {
   background-color: var(--ocean);
   border: none;
 }
 
-.checkbox-label input[type="checkbox"]:checked+.checkbox-frame .checkmark {
+.modal-default-chkbox:checked+.checkbox-frame .checkmark {
   fill: var(--cloud);
 }
 
-.terms-link {
-  color: var(--iris);
-  display: block;
+
+.checkbox-text {
+  display: inline;
+  font: var(--small-text);
+  color: var(--light-slate);
+  letter-spacing: var(--letter-spacing-body);
 }
 
 .terms-link {
+  display: block;
   color: var(--iris);
   font: var(--link-text);
-  letter-spacing: 0.04em;
+  letter-spacing: var(--letter-spacing-body);
   text-decoration: underline;
 }
-
-
 
 
 /* Form submit button styling */
@@ -1183,9 +1223,21 @@ img {
   /* Modal window tablet override rules */
   .modal-window {
     max-width: 408px;
+    width: 408px;
     padding: 72px 24px 24px 24px;
   }
 
+  .checkbox-text {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Custom space between text and link for checkbox label */
+    gap: 4px;
+  }
+
+  .terms-link {
+    line-height: 0;
+  }
 }
 
 /* --- Desktop breakpoint --- */
@@ -1358,5 +1410,17 @@ img {
   .modal-window {
     width: 408px;
     padding: 72px 24px 24px 24px;
+  }
+
+  .checkbox-text {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Custom space between text and link for checkbox label */
+    gap: 4px;
+  }
+
+  .terms-link {
+    line-height: 0;
   }
 }

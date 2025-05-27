@@ -393,7 +393,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .mobile-menu-social-icon {
@@ -442,7 +441,7 @@ img {
   max-width: 1440px;
   background-image:
     linear-gradient(var(--grey-hero), var(--grey-hero)),
-    url(../images/people-office-opt.jpg);
+    url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1102,6 +1101,15 @@ img {
   background-color: var(--ocean);
 }
 
+/* === Background image adaptation for Retina displays === */
+@media (min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+  .hero-section {
+    background-image:
+      linear-gradient(var(--grey-hero), var(--grey-hero)),
+      url("../images/hero-bg@2x.jpg");
+  }
+}
 
 /* === Tablet & Desktop styling === */
 

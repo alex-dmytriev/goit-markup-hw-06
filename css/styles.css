@@ -47,13 +47,7 @@
 
 
 /* === Reset Default Parameters === */
-
 /* Box-sizing by default is set in modern normalize */
-
-/* Temp outline to make all element borders visible */
-/* * {
-  outline: 1px solid red;
-} */
 
 /* Global styles for button and input */
 button {
@@ -108,6 +102,20 @@ a {
 img {
   display: block;
   max-width: 100%;
+}
+
+/* Visually hidden block */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 
@@ -216,7 +224,6 @@ img {
 .contact-link {
   color: var(--slate);
   transition: color var(--basic-transition);
-
 }
 
 /* Navigational & Contacts links hover parameters */
@@ -254,7 +261,6 @@ img {
   background-color: var(--ocean);
   position: absolute;
   bottom: 0;
-  /* Put the decorated element below */
   transform: translateY(100%);
   transition: transform var(--basic-transition);
 }
@@ -344,7 +350,6 @@ img {
   gap: 40px;
   font: var(--header2);
   color: var(--navy-blue);
-  /* margin-bottom: 168px; */
 }
 
 .mobile-menu-bottom-container {
@@ -360,7 +365,6 @@ img {
   gap: 24px;
   font: var(--header3);
   color: var(--slate);
-  /* margin-bottom: 48px; */
 }
 
 /* Reordering mobile menu contact info */
@@ -484,19 +488,6 @@ img {
 }
 
 /* === Features Section === */
-/* Params to hide the h2 in the features section */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 
 .features-list {
   display: flex;
@@ -544,7 +535,6 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 264px; */
 }
 
 
@@ -553,7 +543,6 @@ img {
   gap: 72px;
   flex-direction: column;
   align-items: center;
-  /* width: 264px; */
   margin: 0 0;
 }
 
@@ -724,7 +713,6 @@ img {
   display: flex;
   flex-direction: column;
   text-align: center;
-  /* margin-right: 120px; */
 }
 
 .footer-social {
@@ -780,7 +768,6 @@ img {
 }
 
 .footer-form {
-  /* margin-left: 80px; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -795,7 +782,6 @@ img {
   font: var(--body-medium);
   letter-spacing: 0.02em;
   margin-bottom: 16px;
-  /* margin-left: 80px; */
 }
 
 .footer-email-input {
@@ -870,7 +856,6 @@ img {
   opacity: 0;
   pointer-events: none;
   padding: 8px 16px 8px 16px;
-
 }
 
 .modal-overlay.is-open {
@@ -953,7 +938,6 @@ img {
   letter-spacing: 0.04em;
   color: var(--light-slate);
   display: block;
-  /* margin-bottom: 4px; */
 }
 
 .input-field {
@@ -1047,7 +1031,6 @@ img {
   align-items: center;
   justify-content: center;
   fill: transparent;
-  /* margin-right: 8px; */
   flex-shrink: 0;
 }
 
@@ -1186,7 +1169,6 @@ img {
     max-width: 768px;
   }
 
-
   .team-list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1320,7 +1302,6 @@ img {
   /* Hero section desktop override rules */
   .hero-section {
     padding: 188px 0;
-
   }
 
   .hero-section .container {

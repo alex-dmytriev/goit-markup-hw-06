@@ -1236,6 +1236,10 @@ img {
     gap: 24px;
   }
 
+  .footer-subscription {
+    text-align: left;
+  }
+
   /* Modal window tablet override rules */
   .modal-window {
     max-width: 408px;
@@ -1401,10 +1405,6 @@ img {
 
   .footer-subscribe-btn {
     width: auto;
-  }
-
-  .footer-subscription {
-    align-items: left;
   }
 
   .footer-logo-text {

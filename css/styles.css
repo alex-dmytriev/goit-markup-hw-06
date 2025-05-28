@@ -376,6 +376,9 @@ img {
   order: 2;
 }
 
+.mobile-color-emulation {
+  color: var(--iris);
+}
 
 .mobile-menu-social-icons {
   display: flex;
@@ -445,10 +448,20 @@ img {
   max-width: 1440px;
   background-image:
     linear-gradient(var(--grey-hero), var(--grey-hero)),
-    url(../images/hero-bg.jpg);
+    url(../images/bg/hero-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+/* Background image for mobile Retina */
+@media (min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+  .hero-section {
+    background-image:
+      linear-gradient(var(--grey-hero), var(--grey-hero)),
+      url("../images/bg/hero-bg-mobile@2x.jpg");
+  }
 }
 
 .hero-container {
@@ -938,6 +951,7 @@ img {
   letter-spacing: 0.04em;
   color: var(--light-slate);
   display: block;
+  margin-bottom: 4px;
 }
 
 .input-field {
@@ -959,7 +973,7 @@ img {
 .input-container {
   position: relative;
   width: 100%;
-  margin-top: 4px;
+  /* margin-top: 4px; */
 }
 
 .input-icon {
@@ -1000,7 +1014,7 @@ img {
   border-color: var(--iris);
 }
 
-/* --- Checkbox styling ---*/
+/* --- Modal checkbox styling ---*/
 .checkbox-container {
   margin-bottom: 24px;
   width: 100%;
@@ -1034,15 +1048,21 @@ img {
   flex-shrink: 0;
 }
 
+/* Custom modal check box frame fill color when checked */
 .modal-default-chkbox:checked+.checkbox-frame {
   background-color: var(--ocean);
   border: none;
 }
 
+/* Custom modal check box icon fill when checked */
 .modal-default-chkbox:checked+.checkbox-frame .checkmark {
   fill: var(--cloud);
 }
 
+/* Custom modal check box frame border color when focused */
+.modal-default-chkbox:focus+.checkbox-frame {
+  border: 1px solid var(--ocean);
+}
 
 .checkbox-text {
   display: inline;
@@ -1084,15 +1104,29 @@ img {
   background-color: var(--ocean);
 }
 
+
 /* === Background image adaptation for Retina displays === */
-@media (min-resolution: 192dpi),
-(min-resolution: 2dppx) {
+
+/* --- Tablet Retina displays */
+@media (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1157px),
+(min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1157px) {
   .hero-section {
     background-image:
       linear-gradient(var(--grey-hero), var(--grey-hero)),
-      url("../images/hero-bg@2x.jpg");
+      url("../images/bg/hero-bg-tablet@2x.jpg");
   }
 }
+
+/* --- Desktop Retina displays --- */
+@media (min-resolution: 192dpi) and (min-width: 1158px),
+(min-resolution: 2dppx) and (min-width: 1158px) {
+  .hero-section {
+    background-image:
+      linear-gradient(var(--grey-hero), var(--grey-hero)),
+      url("../images/bg/hero-bg@2x.jpg");
+  }
+}
+
 
 /* === Tablet & Desktop styling === */
 

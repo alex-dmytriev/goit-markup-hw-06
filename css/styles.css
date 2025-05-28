@@ -978,7 +978,7 @@ img {
 
 .input-icon {
   position: absolute;
-  left: 19px;
+  left: 16px;
   top: 50%;
   transform: translateY(-50%);
   transition: fill var(--basic-transition);
@@ -1441,6 +1441,10 @@ img {
   .modal-window {
     width: 408px;
     padding: 72px 24px 24px 24px;
+  }
+
+  .input-field {
+    padding-left: 38px;
   }
 
   .checkbox-text {

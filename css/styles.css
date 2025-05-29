@@ -455,7 +455,7 @@ img {
 }
 
 /* Background image for mobile Retina */
-@media (min-resolution: 192dpi),
+@media screen and (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
   .hero-section {
     background-image:
@@ -1108,7 +1108,7 @@ img {
 /* === Background image adaptation for Retina displays === */
 
 /* --- Tablet Retina displays */
-@media (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1157px),
+@media screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1157px),
 (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1157px) {
   .hero-section {
     background-image:
@@ -1118,7 +1118,7 @@ img {
 }
 
 /* --- Desktop Retina displays --- */
-@media (min-resolution: 192dpi) and (min-width: 1158px),
+@media screen and (min-resolution: 192dpi) and (min-width: 1158px),
 (min-resolution: 2dppx) and (min-width: 1158px) {
   .hero-section {
     background-image:
@@ -1131,7 +1131,7 @@ img {
 /* === Tablet & Desktop styling === */
 
 /* --- Tablet breakpoint --- */
-@media (min-width: 768px) and (max-width: 1157px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
 
   .container {
     max-width: 768px;
@@ -1277,7 +1277,7 @@ img {
 }
 
 /* --- Desktop breakpoint --- */
-@media (min-width: 1158px) {
+@media screen and (min-width: 1158px) {
   section {
     padding-top: 120px;
     padding-bottom: 120px;

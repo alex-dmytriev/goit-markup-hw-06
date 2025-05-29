@@ -455,8 +455,7 @@ img {
 }
 
 /* Background image for mobile Retina */
-@media screen and (min-resolution: 192dpi),
-(min-resolution: 2dppx) {
+@media screen and (min-resolution: 192dpi) {
   .hero-section {
     background-image:
       linear-gradient(var(--grey-hero), var(--grey-hero)),
@@ -1108,8 +1107,7 @@ img {
 /* === Background image adaptation for Retina displays === */
 
 /* --- Tablet Retina displays */
-@media screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1157px),
-(min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1157px) {
+@media screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1157px) {
   .hero-section {
     background-image:
       linear-gradient(var(--grey-hero), var(--grey-hero)),
@@ -1118,8 +1116,7 @@ img {
 }
 
 /* --- Desktop Retina displays --- */
-@media screen and (min-resolution: 192dpi) and (min-width: 1158px),
-(min-resolution: 2dppx) and (min-width: 1158px) {
+@media screen and (min-resolution: 192dpi) and (min-width: 1158px) {
   .hero-section {
     background-image:
       linear-gradient(var(--grey-hero), var(--grey-hero)),
